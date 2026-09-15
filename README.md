@@ -1,118 +1,196 @@
 # 🎮 G3 Gamer Store
 
-Landing page moderna e responsiva para loja de produtos gamer, desenvolvida com as mais recentes tecnologias web.
+![React](https://img.shields.io/badge/React-18.3-61DAFB?logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178C6?logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-5.4-646CFF?logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-06B6D4?logo=tailwindcss&logoColor=white)
+![Vitest](https://img.shields.io/badge/Vitest-3.2-6E9F18?logo=vitest&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
 
-## 🚀 Tecnologias Utilizadas
+Landing page de e-commerce gamer desenvolvida com React e TypeScript, com foco em apresentação de produtos, navegação responsiva e uma experiência interativa para montagem de PCs.
 
-### Frontend Framework
-- **React 18.3** - Biblioteca JavaScript para construção de interfaces
-- **TypeScript 5.8** - Superset JavaScript com tipagem estática
-- **Vite 5.4** - Build tool e dev server extremamente rápido
+## Visão geral
 
-### Estilização
-- **Tailwind CSS 3.4** - Framework CSS utility-first
-- **Tailwind Animate** - Animações CSS com Tailwind
-- **Framer Motion 12.27** - Biblioteca de animações para React
-- **Class Variance Authority** - Gerenciamento de variantes de classes CSS
-- **clsx & tailwind-merge** - Utilitários para manipulação de classes CSS
+O G3 Gamer Store foi desenvolvido como uma experiência web para uma loja especializada em produtos e componentes gamer.
 
-### Componentes UI
-- **shadcn/ui** - Coleção de componentes reutilizáveis e acessíveis
-- **Radix UI** - Primitivos de UI acessíveis e não-estilizados:
-  - Accordion, Alert Dialog, Avatar, Checkbox
-  - Dialog, Dropdown Menu, Navigation Menu
-  - Popover, Progress, Radio Group, Select
-  - Slider, Switch, Tabs, Toast, Tooltip
-  - E muitos outros...
+O projeto combina uma landing page comercial com seções de produtos, ofertas, categorias, marcas e um fluxo interativo para montagem de computadores.
 
-### Ícones e Assets
-- **Lucide React** - Biblioteca de ícones moderna e customizável
+## O problema
 
-### Formulários
-- **React Hook Form 7.61** - Gerenciamento de formulários performático
-- **Zod 3.25** - Validação de schemas TypeScript-first
-- **@hookform/resolvers** - Integração de validadores com React Hook Form
+Uma loja de hardware gamer precisa apresentar diferentes categorias de produtos de forma visual, organizada e fácil de navegar, além de oferecer uma experiência mais interativa para quem deseja montar um PC.
 
-### Carrossel e UI Avançada
-- **Embla Carousel** - Carrossel leve e performático
-- **Vaul** - Drawer/Sheet components
-- **Sonner** - Notificações toast elegantes
-- **input-otp** - Componente de input OTP
-- **React Day Picker** - Seletor de datas
-- **date-fns** - Manipulação e formatação de datas
+O desafio foi transformar essa apresentação em uma interface moderna, responsiva e orientada à experiência do usuário.
 
-### Gráficos
-- **Recharts 2.15** - Biblioteca de gráficos para React
+## Solução
 
-### Roteamento
-- **React Router DOM 6.30** - Roteamento declarativo para React
+A aplicação organiza a experiência em seções reutilizáveis e componentes independentes, incluindo:
 
-### Estado e Data Fetching
-- **TanStack Query (React Query) 5.83** - Gerenciamento de estado assíncrono e cache
+- Hero e apresentação principal
+- Destaques e benefícios
+- Ofertas
+- Categorias de produtos
+- Marcas
+- Newsletter
+- Contato via WhatsApp
+- Fluxo interativo de montagem de PC
+- Navegação entre páginas
+- Componentes de interface reutilizáveis
 
-### Temas
-- **next-themes** - Gerenciamento de temas (dark/light mode)
+A página principal é composta por componentes independentes, enquanto a rota `/monte-seu-pc` concentra a experiência de configuração de hardware.
 
-### Qualidade de Código
-- **ESLint 9.32** - Linter JavaScript/TypeScript
-- **TypeScript ESLint** - Regras ESLint específicas para TypeScript
+## Stack
+
+### Frontend
+
+- **React 18** — construção da interface
+- **TypeScript** — tipagem estática e organização do código
+- **Vite** — desenvolvimento e build
+- **React Router DOM** — navegação entre páginas
+
+### UI e experiência
+
+- **Tailwind CSS** — estilização utility-first
+- **shadcn/ui + Radix UI** — componentes e primitivas de interface reutilizáveis
+- **Framer Motion** — animações e interações
+- **Lucide React** — ícones
+- **Embla Carousel** — carrosséis
+- **Sonner** — notificações
+
+### Formulários e validação
+
+- **React Hook Form** — gerenciamento de formulários
+- **Zod** — validação baseada em schemas
+- **@hookform/resolvers** — integração entre formulário e validação
+
+### Estado e dados
+
+- **TanStack Query** — gerenciamento de estado assíncrono e cache
+
+### Qualidade
+
+- **ESLint** — análise estática
+- **Vitest** — framework de testes
+- **Testing Library** — utilitários para testes React
+- **jsdom** — ambiente DOM para testes
+
+## Estrutura
+
+```text
+src/
+├── assets/
+├── components/
+│   ├── ui/
+│   ├── BrandsSection.tsx
+│   ├── BuildPCWizard.tsx
+│   ├── CategoriesSection.tsx
+│   ├── FeaturesSection.tsx
+│   ├── Header.tsx
+│   ├── Hero.tsx
+│   ├── OffersSection.tsx
+│   ├── ProductCard.tsx
+│   └── ...
+├── pages/
+│   ├── Index.tsx
+│   ├── BuildPC.tsx
+│   └── NotFound.tsx
+├── test/
+│   ├── example.test.ts
+│   └── setup.ts
+├── App.tsx
+├── App.css
+├── index.css
+└── main.tsx
+```
+
+## Qualidade e engenharia
+
+O projeto possui uma base configurada para desenvolvimento em React com TypeScript, ESLint, Vitest, Testing Library e jsdom.
 
 ### Testes
-- **Vitest 3.2** - Framework de testes unitários ultrarrápido
-- **Testing Library** - Utilitários para testes de componentes React
-- **jsdom** - Implementação JavaScript do DOM para testes
 
-### Build e Deploy
-- **PostCSS** - Processador de CSS
-- **Autoprefixer** - Plugin PostCSS para adicionar vendor prefixes
-- **Vercel** - Plataforma de deploy (configurado via vercel.json)
+A infraestrutura do Vitest está configurada para arquivos `.test.ts`, `.test.tsx`, `.spec.ts` e `.spec.tsx`, com ambiente `jsdom` e setup do Testing Library.
 
-## 📦 Instalação
+Atualmente existe **1 arquivo de teste**:
+
+```text
+src/test/example.test.ts
+```
+
+O teste atual é um smoke test que verifica uma asserção básica. Portanto, existe infraestrutura de testes configurada, mas **não há cobertura funcional comprovada de componentes, páginas ou regras de negócio**.
+
+Não é apresentado percentual de cobertura nem badge de testes passando.
+
+## Deploy
+
+O projeto possui configuração para deploy na Vercel através de `vercel.json`, utilizando Vite, build para `dist` e rewrite para `index.html`.
+
+Deploy configurado/documentado no repositório:
+
+**https://g3-gamer-store.vercel.app**
+
+A disponibilidade atual dessa URL não foi confirmada de forma independente.
+
+## Como rodar localmente
+
+### Pré-requisitos
+
+- Node.js
+- npm
+
+### Instalação
 
 ```bash
-# Clone o repositório
-git clone https://github.com/KayohanCosta/g3-gamer-store.git
-
-# Entre na pasta do projeto
-cd g3-gamer-store
-
-# Instale as dependências
+git clone https://github.com/KayohanCosta/G3-Gamer-Store.git
+cd G3-Gamer-Store
 npm install
 ```
 
-## 🛠️ Scripts Disponíveis
+### Desenvolvimento
 
 ```bash
-# Inicia o servidor de desenvolvimento
 npm run dev
+```
 
-# Cria build de produção
+### Build
+
+```bash
 npm run build
+```
 
-# Cria build de desenvolvimento
-npm run build:dev
+### Preview
 
-# Preview do build de produção
+```bash
 npm run preview
+```
 
-# Executa os testes
+### Testes
+
+```bash
 npm run test
+```
 
-# Executa os testes em modo watch
+### Testes em modo watch
+
+```bash
 npm run test:watch
+```
 
-# Executa o linter
+### Lint
+
+```bash
 npm run lint
 ```
 
-## 🌐 Deploy
+## Resultado
 
-O projeto está configurado para deploy automático na Vercel. A cada push para a branch `main`, um novo deploy é automaticamente criado.
+O projeto demonstra uma implementação de interface moderna para e-commerce gamer, combinando componentes reutilizáveis, navegação por rotas, animações, UI baseada em Radix/shadcn e uma experiência interativa de montagem de PC.
 
-## 📝 Licença
+A arquitetura técnica detalhada, as decisões de implementação e o fluxo das principais funcionalidades estão documentados em [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
 
-Este projeto está sob a licença MIT.
+## Licença
+
+Este projeto está sob a licença MIT. Consulte o arquivo [`LICENSE`](LICENSE) para o texto completo da licença.
 
 ---
 
-Desenvolvido com 💚 por [Kayohan Costa](https://github.com/KayohanCosta)
+Desenvolvido por [Kayohan Costa](https://github.com/KayohanCosta)
